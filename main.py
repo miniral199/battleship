@@ -1,3 +1,4 @@
+# version 1.0
 from ship import Ships
 def introduction():
   print("Я делаю морской бой!")
