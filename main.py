@@ -7,10 +7,11 @@ def introduction():
 if __name__=="__main__":
   
   introduction()
-  ship=Ships()
+  ships=Ships()
 
-  ship.create_ship('Galleon34',11,123)
-  ship.create_ship('Galleon3',112,122)
-  ship.create_ship('Galleon1',111,125)
-  ship.create_ship('Galleon22',1,124)
+  ships.create_ship('Galleon34',11,123)
+  ships.create_ship('Galleon3',112,122)
+  ships.create_ship('Galleon1',111,125)
+  ships.create_ship('Galleon22',1,124)
   
+  print(ships.ships)

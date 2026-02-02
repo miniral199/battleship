@@ -1,16 +1,15 @@
 class Ships:
   
   def __init__(self):
-    self.ships=[]
+    self.ships={}
+    
   
   def create_ship(self, name, x, y):
     
-    self.ships={
-      "name":name,
-      "x-pos":x,
-      "y-pos":y
-      }
-      
+    self.ships[name]={
+      "x":x,
+      "y":y
+    }
   
   
   
