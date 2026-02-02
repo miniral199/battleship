@@ -10,6 +10,7 @@ class Ships:
       "x":x,
       "y":y
     }
+    
   
   
   

@@ -1,17 +1,23 @@
 # version 1.0
+from desk import Desk
 from ship import Ships
 def introduction():
   print("Я делаю морской бой!")
 
 
+
 if __name__=="__main__":
   
   introduction()
-  ships=Ships()
-
-  ships.create_ship('Galleon34',11,123)
-  ships.create_ship('Galleon3',112,122)
-  ships.create_ship('Galleon1',111,125)
-  ships.create_ship('Galleon22',1,124)
   
-  print(ships.ships)
+  # testing creation of enemy's desk
+  enemy_desk=Desk(11,13)
+  enemy_desk.create_enemy()
+  
+  enemy_desk.print_enemy()
+  
+  
+  # ships=Ships()
+  
+  
+  # print(ships.ships)
