@@ -11,9 +11,9 @@ def shoot(desk):
     x=int(input("Type x:"))
     y=int(input("Type y:"))
   
-    if desk[x][y] == 1:
+    if desk[y][x] == 1:
       print("Есть попадание!")
-      desk[x][y]=0
+      desk[y][x]=0
     
     else:
       print("Мимо!")
@@ -36,7 +36,7 @@ if __name__=="__main__":
   while True:
     shoot(enemy_desk.enemy_field)
     if not enemy_desk.check_ships():
-      print("Вы победили!")
+      print("Победа!")
       break
     enemy_desk.print_enemy()
 
