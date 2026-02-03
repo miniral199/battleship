@@ -47,6 +47,7 @@ if __name__=="__main__":
     shoot(enemy_desk.enemy_field)
     if not enemy_desk.check_ships():
       print("\nПобеда!")
+      input("\nНажмите Enter чтобы выйти:")
       break
     enemy_desk.print_enemy()
 
