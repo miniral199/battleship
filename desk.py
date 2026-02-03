@@ -7,9 +7,6 @@ class Desk:
     # количество клеток
     self.cells=size_x*size_y
     self.enemy_field=[[""]*size_x for _ in range(size_y)]
-    # self.enemy_field=[
-    #   ['','',''],['','','']
-    # ]
 
   # generates enemy's desk with random ships position
   def create_enemy(self):
@@ -22,9 +19,29 @@ class Desk:
 
 
   def print_enemy(self):
-    for a,b in enumerate(self.enemy_field):
-      print(b)
-    # print(self.enemy_field[0][1]) #x=0 y=1
+    for a,b in reversed(list(enumerate(self.enemy_field))):
+  
+      print(f"{a}| ",end=" ")
+      
+      for x in b:
+        
+        print(x,end=" ")
+      
+      print()
+      if a==0:
+        print(self.x*" ",end="")
+        for i in range(len(b)):
+          print("———",end="")
+          
+        print()
+        print((self.x+1)*" ",end="")
+        for num in range(len(b)):
+          
+          print(num,end=" ")
+
+
+    # print("—"*5)
+    print("\nY/X")
   
   # checks if there any ships?
   def check_ships(self):
