@@ -1,5 +1,6 @@
-# version 1.1
-from desk import Desk
+# version 1.2
+from enemy import Enemy
+
 # from ship import Ships
 def introduction(x,y):
   print("Я делаю морской бой!")
@@ -36,21 +37,22 @@ if __name__=="__main__":
   max_y=5
   
   introduction(max_x,max_y)
-  # testing creation of enemy's desk
-  enemy_desk=Desk(max_x,max_y)
-  enemy_desk.create_enemy()
+  # testing creation of enemy's desk (almost empty,object)
+  enemy=Enemy(max_x,max_y)
+
+
+  # logic
+  enemy.desk.set(enemy.ships.create(enemy.desk.get()))
   
-  enemy_desk.print_enemy()
+  enemy.desk.print_desk()
+  
+
   
   
   while True:
-    shoot(enemy_desk.enemy_field)
-    if not enemy_desk.check_ships():
+    shoot(enemy.desk.get())
+    if not enemy.ships.check_ships(enemy.desk.get()):
       print("\nПобеда!")
       input("\nНажмите Enter чтобы выйти:")
       break
-    enemy_desk.print_enemy()
-
-
-  # ships=Ships()
-  # print(ships.ships)
+    enemy.desk.print_desk()
