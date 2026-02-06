@@ -23,7 +23,3 @@ class Ships:
         return True
     return False 
   
-  # def print_coordinates(self):
-  #   print(f"Текущее положение Корабля по имени '{self.name}': ")
-  #   print(f"По оси x: {self.x}")
-  #   print(f"По оси y: {self.y}")
